@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product_card2</title>
 </head>
+
 <body>
+    <!-- Product Card Start -->
     <h1>This is a product card</h1>
+    <div class="product">
+        <div class="cards">
+            <img id="img1" src="images/product1.jpg" alt="">
+            <img id="img2" src="images/product2.jpg" alt="">
+            <img id="img3" src="images/product3.jpg" alt="">
+            <img id="img4" src="images/product4.jpg" alt="">
+        </div>
+        <div class="small-cards">
+            <a href="#img1"><img src="images/product1.jpg" alt=""></a>
+            <a href="#img2"><img src="images/product2.jpg" alt=""></a>
+            <a href="#img3"><img src="images/product3.jpg" alt=""></a>
+            <a href="#img4"><img src="images/product4.jpg" alt=""></a>
+        </div>
+    </div>
+    <!-- product style starts -->
+    <style>
+        .product{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .product .cards{
+            display: flex;
+            width: 50%;
+            position: relative;
+        }
+        .product .cards img{
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+        }
+        .product .cards img:first-child{
+            opacity: 1;
+        }
+        .product .small-cards{
+            display: flex;
+            width: 50%;
+            justify-content: space-evenly;
+        }
+        .product .small-cards img{
+            position: relative;
+            width: 98%;
+            overflow: hidden;
+            border: 1px solid;
+        }
+        
+        .cards img:target{
+            opacity: 1;
+        }
+    </style>
+    <!-- product style ends -->
+    <div class="product_details">
+        <h1>Product Name</h1>
+        <h4>Brand: <span>Company Name</span></h4>
+
+    </div>
+    <!-- Product Card Ends -->
 </body>
+
 </html>
