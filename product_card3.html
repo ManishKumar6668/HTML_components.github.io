@@ -8,5 +8,62 @@
 </head>
 <body>
     <h1>This is a product card page</h1>
+    <div class="product">
+        <div class="cards">
+            <img id="img1" src="images/product1.jpg" alt="">
+            <img id="img2" src="images/product2.jpg" alt="">
+            <img id="img3" src="images/product3.jpg" alt="">
+            <img id="img4" src="images/product4.jpg" alt="">
+        </div>
+        <div class="card-list">
+            <ul>
+                <li><a href="#img1"><img src="images/product1.jpg" alt=""></a></li>
+                <li><a href="#img2"><img src="images/product2.jpg" alt=""></a></li>
+                <li><a href="#img3"><img src="images/product3.jpg" alt=""></a></li>
+                <li><a href="#img4"><img src="images/product4.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <style>
+        .product{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+        }
+        .product .cards{
+            display: flex;
+            position: relative;
+            width: 50%;
+        }
+        .product .cards img{
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+        }
+        .product .cards img:first-child{
+            opacity: 1;
+        }
+        .product .cards img:target{
+            opacity: 1;
+        }
+        .product .card-list{
+            display: flex;
+            position: relative;
+            align-items: center;
+        }
+        .product .card-list ul{
+            width: 50%;
+            padding: 10px;
+            list-style: none;
+        } 
+        .product .card-list ul li{
+            width: 20%;
+            margin: 3px;
+        }
+        .product .card-list ul li img{
+            width: 100%;
+        }
+    </style>
 </body>
 </html>
